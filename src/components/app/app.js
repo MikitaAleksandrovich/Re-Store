@@ -1,13 +1,24 @@
 import React, { Component } from 'react';
 
+import ErrorBoundry from '../error-boundry';
+import ErrorButton from '../error-button';
+
 import './app.css';
+
 
 export default class App extends Component {
     render() {
+
         return (
             <div>
-                <h2>Book Store</h2>
+                <ErrorBoundry>
+            
+                    <ErrorButton/>
+            
+        
+                </ErrorBoundry>
             </div>
         );
     }
 }
+
