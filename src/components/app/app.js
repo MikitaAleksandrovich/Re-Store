@@ -13,7 +13,7 @@ export default class App extends Component {
             <div>
                 <ErrorBoundry>
             
-                    <ErrorButton/>
+                    <ErrorButton />
             
         
                 </ErrorBoundry>
