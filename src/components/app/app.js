@@ -1,23 +1,18 @@
 import React, { Component } from 'react';
 
 import ErrorBoundry from '../error-boundry';
-import ErrorButton from '../error-button';
+import Spinner from '../spinner';
 
 import './app.css';
 
 
 export default class App extends Component {
-    render() {
 
+    render() {
         return (
-            <div>
-                <ErrorBoundry>
-            
-                    <ErrorButton />
-            
-        
-                </ErrorBoundry>
-            </div>
+            <ErrorBoundry>
+                <Spinner />
+            </ErrorBoundry>
         );
     }
 }
