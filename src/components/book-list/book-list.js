@@ -32,7 +32,7 @@ class BookList extends Component {
                             <li key={book.id}> <BookListItem book={book}/></li>
                         )
                     })
-                };
+                }
             </ul>
         );
     }
