@@ -10,16 +10,17 @@ import './book-list.css';
 
 class BookList extends Component {
 
-    
-  componentDidMount() {
-    // 1. receive data
-    const { bookstoreService } = this.props;
-    const data = bookstoreService.getBooks();
-
-    // 2. dispacth action to store
-    this.props.booksLoaded(data);
-  }
   
+    componentDidMount() {
+        // 1. Recieve data
+        const { bookstoreService } = this.props;
+        const data = bookstoreService.getBooks();
+
+        // 2. Dispatch action to store
+        this.props.booksLoaded(data);
+    };
+
+
     render() {
 
         const { books } = this.props;
@@ -35,18 +36,20 @@ class BookList extends Component {
                 }
             </ul>
         );
-    }
+    };
 };
+
 
 const mapStateToProps = (state) => {
     return {
         books: state.books,
-    };
+    }; 
 };
 
-const mapDispatchToProps =  {
+const mapDispatchToProps = {
     booksLoaded
-}
+};
 
-export default WithBookstoreService()(connect(mapStateToProps, mapDispatchToProps)(BookList)) ;
+
+export default WithBookstoreService()(connect(mapStateToProps, mapDispatchToProps)(BookList));
 
