@@ -4,6 +4,7 @@
     flex-direction: column;
     align-items: center;
     color: #e01f1f;
+    margin-top: 20px;
   }
   
   .error-indicator img {
