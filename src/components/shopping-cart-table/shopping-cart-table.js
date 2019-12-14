@@ -15,7 +15,7 @@ const ShoppingCartTable = ({ items, total, onIncrease, onDecrease, onDelete }) =
                  <td>${total}</td>
                  <td>
                      <button 
-                         onClick={() => onDecrease(id)}
+                         onClick={() => onDelete(id)}
                          className="btn btn-outline-danger btn-sm float-right">
                          <i className="fa fa-trash-o" />
                      </button>
@@ -25,7 +25,7 @@ const ShoppingCartTable = ({ items, total, onIncrease, onDecrease, onDelete }) =
                          <i className="fa fa-plus-circle" />
                      </button>
                      <button 
-                         onClick={() => onDelete(id)}
+                         onClick={() => onDecrease(id)}
                          className="btn btn-outline-warning btn-sm float-right">
                          <i className="fa fa-minus-circle" />
                      </button>
